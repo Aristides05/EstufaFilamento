@@ -18,8 +18,8 @@
 
 /*------------------------------------------------------------------------------------------------------------*/
 /*  DEFINIÇÕES */
-#define TemperaturaMinima 23
-#define TemperaturaMaxima 30
+#define TemperaturaMinima 40
+#define TemperaturaMaxima 60
 #define tempo 4000
 /*------------------------------------------------------------------------------------------------------------*/
 
@@ -237,12 +237,12 @@ void execucao()
     tempoAntExec = millis();
   }
 
-  if(t<tempFinal)
+  if(t<tempFinal-5)
   {
     digitalWrite(rele1,1);
     digitalWrite(rele2,1);
     digitalWrite(rele3,1); 
-  }else if(t>=tempFinal)
+  }else if(t>tempFinal+3)
   {
     digitalWrite(rele1,0);
     digitalWrite(rele2,0);
